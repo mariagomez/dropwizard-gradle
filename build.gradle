@@ -13,8 +13,10 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.5'
-
+    compile (
+        'io.dropwizard:dropwizard-core:0.7.0',
+        'org.slf4j:slf4j-api:1.7.5'
+    )
     testCompile "junit:junit:4.11"
 }
 
