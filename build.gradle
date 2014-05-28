@@ -24,3 +24,13 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '1.11'
 }
+
+apply plugin: 'application'
+
+// The main class of the application
+mainClassName = 'com.example.helloworld.HelloWorldApplication'
+
+// Configure the run task to start the Dropwizard service
+run {
+    args 'server', 'hello-world.yml'
+}
