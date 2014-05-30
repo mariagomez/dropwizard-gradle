@@ -34,3 +34,13 @@ mainClassName = 'com.example.helloworld.HelloWorldApplication'
 run {
     args 'server', 'hello-world.yml'
 }
+
+test {
+    // show standard out and standard error of the test JVM(s) on the console
+    testLogging {
+        showStandardStreams = true
+        displayGranularity = 2
+        exceptionFormat = 'full'
+        events 'started', 'passed'
+    }
+}
