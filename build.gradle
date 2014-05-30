@@ -6,6 +6,10 @@ apply plugin: 'idea'
 sourceCompatibility = '1.7'
 targetCompatibility = '1.7'
 
+// Set our project variables
+project.ext {
+    dropwizardVersion = '0.7.0'
+}
 // In this section you declare where to find the dependencies of your project
 repositories {
     mavenCentral()
@@ -14,7 +18,8 @@ repositories {
 // In this section you declare the dependencies for your production and test code
 dependencies {
     compile (
-        'io.dropwizard:dropwizard-core:0.7.0',
+        'io.dropwizard:dropwizard-core:' + dropwizardVersion,
+        'io.dropwizard:dropwizard-testing:' + dropwizardVersion,
         'org.slf4j:slf4j-api:1.7.5'
     )
     testCompile "junit:junit:4.11"
